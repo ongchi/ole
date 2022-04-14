@@ -39,7 +39,7 @@
 //! // We're going to extract a file from the OLE storage
 //! let entry = parser.iterate().next().unwrap();
 //! let mut slice = parser.get_entry_slice(entry).unwrap();
-//! let mut buffer = std::vec::Vec::<u8>::with_capacity(slice.len());
+//! let mut buffer = Vec::<u8>::with_capacity(slice.len());
 //! slice.read_to_end(&mut buffer);
 //!
 //! // Saves the extracted file
@@ -51,18 +51,16 @@
 //!
 //! The `ole` crate is tested for rust 1.9 or greater.
 
-
 mod ole;
 pub use ole::Reader;
 pub(crate) mod iterator;
 pub use iterator::OLEIterator;
 mod error;
 pub use error::Error;
-pub(crate) mod header;
-pub(crate) mod util;
-pub(crate) mod sat;
 pub(crate) mod constants;
 pub(crate) mod entry;
+pub(crate) mod header;
+pub(crate) mod sat;
 pub use entry::Entry;
 pub use entry::EntrySlice;
 pub use entry::EntryType;

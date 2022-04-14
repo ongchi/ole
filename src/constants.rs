@@ -15,8 +15,7 @@
 // Author: zadig <thomas chr(0x40) bailleux.me>
 
 pub(crate) const HEADER_SIZE: usize = 512;
-pub(crate) const IDENTIFIER: [u8; 8] = [0xD0, 0xCF, 0x11, 0xE0,
-                        0xA1, 0xB1, 0x1A, 0xE1];
+pub(crate) const IDENTIFIER: [u8; 8] = [0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1];
 
 pub(crate) const UID_SIZE: usize = 16;
 
