@@ -51,17 +51,19 @@
 //!
 //! The `ole` crate is tested for rust 1.9 or greater.
 
-mod ole;
-pub use ole::Reader;
-pub(crate) mod iterator;
-pub use iterator::OLEIterator;
 mod error;
-pub use error::Error;
+mod ole;
+
 pub(crate) mod constants;
 pub(crate) mod entry;
 pub(crate) mod header;
+pub(crate) mod iterator;
 pub(crate) mod sat;
-pub use entry::Entry;
-pub use entry::EntrySlice;
-pub use entry::EntryType;
 pub(crate) mod sector;
+
+pub use crate::entry::Entry;
+pub use crate::entry::EntrySlice;
+pub use crate::entry::EntryType;
+pub use crate::error::Error;
+pub use crate::iterator::OLEIterator;
+pub use crate::ole::Reader;
