@@ -1,3 +1,5 @@
+> The original repo is deleted by author, this is backup from crates.io
+
 # OLE
 
 [![Crates.io](https://img.shields.io/crates/v/ole.svg)](https://crates.io/crates/ole)
